@@ -1,13 +1,16 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { GoSearch } from "react-icons/go";
 import { MdOutlineExplore } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { FaRegHeart, FaUserCircle } from "react-icons/fa";
 import { BiMessageSquareAdd } from "react-icons/bi";
+import PostCreateModel from "../components/PostCreateModel";
+import { useState } from "react";
 
 const MenuBar = () => {
+  const [openModel, setOpenModel] = useState(false);
   return (
     <div className="bg-[#000] border-r border-r-gray-800">
       <nav className="flex flex-col p-5 fixed">
@@ -37,9 +40,18 @@ const MenuBar = () => {
           <Link to="/" className="flex flex-row items-center text-lg py-3 my-2">
             <FaRegHeart className="text-2xl mr-3" /> Notification
           </Link>
-          <Link to="/" className="flex flex-row items-center text-lg py-3 my-2">
+
+          <button
+            onClick={() => setOpenModel(true)}
+            className="flex flex-row items-center text-lg py-3 my-2"
+          >
             <BiMessageSquareAdd className="text-2xl mr-3" /> Create
-          </Link>
+          </button>
+          <PostCreateModel
+            onClose={() => setOpenModel(false)}
+            open={openModel}
+          />
+
           <Link
             to="/profile"
             className="flex flex-row items-center text-lg py-3 my-2"

@@ -3,6 +3,7 @@ import "./App.css";
 import MenuBar from "./MenuBar/Navbar";
 import Explore from "./pages/Explore";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/explore" element={<Explore />}></Route>
           <Route path="/messages" element={<Messages />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
+          {/* <Route path="/login" element={<Login />}></Route> */}
         </Routes>
       </>
       <div className="border">
