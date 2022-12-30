@@ -86,7 +86,11 @@ const PostCreateModel = ({ open, onClose }) => {
                   {/* info */}
                   <div className="p-4">
                     <div className="flex items-center">
-                      <img class="w-10 h-10 rounded-full" src={boy} alt="" />
+                      <img
+                        className="w-10 h-10 rounded-full"
+                        src={boy}
+                        alt=""
+                      />
                       <h5 className="text-lg font-bold text-white ml-3">
                         Jugol Karmakar
                       </h5>

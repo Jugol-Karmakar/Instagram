@@ -9,7 +9,7 @@ import Profile from "./pages/Profile";
 
 function App() {
   return (
-    <div className="min-h-screen grid grid-cols-[300px_600px_400px_minmax(600px,_1fr)_100px] gap-5">
+    <div className="min-h-screen grid grid-cols-[300px_1000px_minmax(600px,_1fr)_100px] gap-5">
       <>
         <MenuBar />
       </>
@@ -19,12 +19,9 @@ function App() {
           <Route path="/explore" element={<Explore />}></Route>
           <Route path="/messages" element={<Messages />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
-          {/* <Route path="/login" element={<Login />}></Route> */}
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </>
-      <div className="border">
-        <h2>Side bar</h2>
-      </div>
     </div>
   );
 }
